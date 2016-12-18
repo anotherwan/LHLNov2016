@@ -1,0 +1,49 @@
+
+
+#nav-bar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding: 0px 2em;
+  z-index: 3;
+}
+
+#nav-bar .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  padding-right: 10px;
+}
+
+#nav-bar .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 3;
+  font-size: 200%;
+}
+
+button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #008B8B;
+  padding: 20px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+button:active {
+  color: black;
+}
+
+button:hover {
+  color: black;
+  cursor: pointer;
+}

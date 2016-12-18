@@ -1,0 +1,13 @@
+
+<% if (email) { %>
+  <%= email %>
+  <form method="POST" action= "<%=`/logout` %>" >
+    <input type="submit" value="logout">
+  </form>
+  <% } else { %>
+  <form method="POST" action= "<%=`/login` %>" >
+    <input type="text" name="email">
+    <input type="submit" value="login">
+    <a href="http://localhost:8080/register">Register Here</a>
+  </form>
+<% } %>

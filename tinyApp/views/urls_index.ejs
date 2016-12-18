@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>TinyApp</title>
+      <% include partials/_header %>
+    </head>
+    <body>
+      <!-- Add your EJS code here -->
+      <p>
+        <% Object.keys(urls).forEach(shortURL => { %>
+        <label><b> Short Url: </b></label>
+        <%= shortURL %>
+      </p>
+      <p>
+        <label><b> Long Url: </b></label>
+        <%= urls[shortURL]['longURL']  %>
+      </p>
+          <form method="GET" action= "<%=`/urls/${shortURL}` %>" >
+          <input type="submit" value="Edit">
+          </form>
+          <form method="POST" action="<%= `/urls/${shortURL}/delete` %>">
+          <input type="submit" value="Delete">
+          </form>
+      <br>
+      <% }) %>
+        <a href="/urls/new">Shorten a new URL</a>
+    </body>
+  </html>
